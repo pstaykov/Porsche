@@ -1,0 +1,440 @@
+/* === General Reset & Typography === */
+html, body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  background: linear-gradient(to bottom, #eeeeee, #d1d1d1); /* Metallic feel */
+  font-family: "Barlow Condensed", sans-serif;
+  text-align: center;
+}
+
+/* === Floating Navigation === */
+.floating-nav {
+  position: fixed;
+  top: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  background: white;
+  padding: 0.75rem 2rem;
+  border-radius: 999px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+}
+
+.floating-nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 2rem;
+}
+
+.floating-nav a {
+  text-decoration: none;
+  color: #111;
+  font-size: 1.1rem;
+  font-weight: 600;
+  transition: color 0.2s ease;
+}
+
+.floating-nav a:hover {
+  color: #c00000;
+}
+
+/* === Title Section === */
+.section-title {
+  margin-top: 8rem;
+  margin-bottom: 4rem;
+  text-align: center;
+}
+
+.page-title {
+  font-size: 5rem;
+  margin: 0 auto 2rem;
+  display: inline-block;
+  position: relative;
+  z-index: 2;
+}
+
+.sub-label {
+  font-size: 0.4em;
+  font-style: italic;
+  font-weight: 400;
+  margin-left: 0.3rem;
+  color: #555;
+  white-space: nowrap;
+}
+
+.hero-image-wrapper {
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+.hero-image {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* === Paragraph Section === */
+.paragraph {
+  margin: 3rem auto;
+  padding: 1rem;
+  background-color: #ffffff;
+  color: #111111;
+  font-size: 30px;
+  max-width: 800px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+/* === Specs Section === */
+.specs-section {
+  background-color: #ffffff;
+  color: #111111;
+  margin: 5rem auto;
+  padding: 3rem;
+  max-width: 900px;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  text-align: left;
+}
+
+.specs-section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  font-weight: 700;
+}
+
+.specs-list {
+  font-size: 1.5rem;
+  list-style: none;
+  padding: 0;
+}
+
+.specs-list li {
+  padding: 0.75rem 0;
+  border-bottom: 1px solid #eee;
+}
+
+.specs-list li:last-child {
+  border-bottom: none;
+}
+
+/* === Animations === */
+.slide-in {
+  opacity: 0;
+  transform: translateX(-80px);
+  animation: slideInLeft 1s ease-out forwards;
+  animation-delay: 0.3s;
+}
+
+@keyframes slideInLeft {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.fade-in-text {
+  opacity: 0;
+  transform: translateY(60px);
+  transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.fade-in-text.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* === Hover Effects === */
+.hover-lift {
+  opacity: 0.75;
+  transition: transform 0.3s ease, opacity 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hover-lift:hover {
+  transform: translateY(-8px) scale(1.02);
+  opacity: 1;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+/* === Custom Mark Styling === */
+.car-summary mark {
+  background: none;
+  color: inherit;
+  position: relative;
+  white-space: nowrap;
+}
+
+.car-summary mark::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(120deg, #ffef9f 0%, #ffe184 100%);
+  transform: scaleY(0.4);
+  transform-origin: bottom;
+  z-index: -1;
+  border-radius: 4px;
+  transition: transform 0.3s ease;
+}
+
+.car-summary:hover mark::before {
+  transform: scaleY(1);
+}
+
+/* === Modern Specs Section Layout === */
+.modern-specs-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 5rem 2rem;
+  background-color: #fff;
+  flex-wrap: wrap;
+  max-width: 1400px;
+  margin: auto;
+}
+
+.specs-left {
+  flex: 1;
+  min-width: 300px;
+}
+
+.spec-item {
+  margin-bottom: 3rem;
+  margin-left: 3rem;
+  text-align: left;
+}
+
+.spec-value {
+  font-size: 4rem;
+  font-weight: bold;
+  color: #111;
+}
+
+.spec-label {
+  font-size: 1rem;
+  color: #666;
+  margin-top: 0.5rem;
+}
+
+.spec-value .unit {
+  font-size: 1.5rem;
+  font-weight: 400;
+  margin-left: 1rem;
+}
+
+.separator {
+  margin: 0 0.5rem;
+  font-weight: 300;
+}
+
+.specs-right {
+  flex: 1;
+  text-align: center;
+}
+
+.specs-right img {
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+}
+
+/* === Road Gallery Section === */
+.road-gallery-section {
+  padding: 5rem 2rem 10rem;
+  background-color: #f8f8f8;
+  text-align: center;
+  position: relative;
+}
+
+.road-gallery-section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 4rem;
+}
+
+.image-gallery {
+  display: flex;
+  justify-content: center;
+  gap: 4rem;
+  flex-wrap: wrap;
+  position: relative;
+  z-index: 1;
+}
+
+.floating-image {
+  width: 380px;
+  height: 260px;
+  overflow: hidden;
+  border-radius: 16px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  will-change: transform;
+  position: relative;
+}
+
+.floating-image:nth-child(1) { top: 0rem; }
+.floating-image:nth-child(2) { top: 4rem; }
+.floating-image:nth-child(3) { top: 2rem; }
+
+.floating-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.floating-image:hover {
+  transform: scale(2.05) translateY(-10px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+}
+
+/* === Track Video Section === */
+.track-video-section {
+  position: relative;
+  height: 60vh;
+  overflow: hidden;
+}
+
+.bg-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.4);
+  z-index: 1;
+}
+
+.video-overlay {
+  position: relative;
+  z-index: 2;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.video-overlay h2 {
+  color: #fff;
+  font-size: 10rem;
+  text-shadow: 0 0 60px rgba(0, 0, 0, 0.6);
+}
+
+/* === Track Stats Section === */
+.track-stats-section {
+  background-color: #111;
+  padding: 5rem;
+  text-align: center;
+  color: white;
+}
+
+.track-stats-gallery {
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+  flex-wrap: wrap;
+  align-items: stretch;
+  margin-top: 2rem;
+}
+
+.track-stat {
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+  width: 280px;
+  height: 160px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  transition: transform 0.3s ease-out;
+  will-change: transform;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.track-stat::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+
+.track-stat .stat-number,
+.track-stat .stat-label {
+  position: relative;
+  z-index: 2;
+}
+
+.stat-number {
+  font-size: 3rem;
+  font-weight: 700;
+}
+
+.stat-label {
+  margin-top: 0.5rem;
+  font-size: 1.1rem;
+  color: #ccc;
+}
+
+/* === History Section === */
+.history-section {
+  background-color: #111;
+  color: #eee;
+  padding: 6rem 15vw;
+  margin: 0;
+  text-align: left;
+  line-height: 1.7;
+  font-size: 20px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.history-heading {
+  font-size: 2.8rem;
+  color: white;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.history-subheading {
+  font-size: 1.5rem;
+  margin-top: 2.5rem;
+  margin-bottom: 1rem;
+  color: #fff;
+  font-weight: 600;
+}
+
+.history-mark {
+  background: rgba(255, 255, 255, 0.15);
+  color: #fff;
+  padding: 0.1em 0.3em;
+  border-radius: 4px;
+  font-weight: 600;
+}
+
+.floating-history:nth-child(1) { margin-top: 0rem; }
+.floating-history:nth-child(2) { margin-top: 3rem; }
+.floating-history:nth-child(3) { margin-top: 1.5rem; }
+
+.floating-history:hover {
+  transform: scale(1.05) translateY(-10px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.floating-history {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  will-change: transform;
+}

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Porsche Track Stats</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- Floating Nav -->
+  <nav class="floating-nav">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="index.html#specs">Specs</a></li>
+      <li><a href="#history">History</a></li>
+    </ul>
+  </nav>
+
+  <!-- Track Video Section -->
+  <section class="track-video-section">
+    <video autoplay muted loop playsinline class="bg-video">
+      <source src="track-footage.mp4" type="video/mp4" />
+      Your browser does not support the video tag.
+    </video>
+    <div class="video-overlay">
+      <h2 class="barlow-condensed-bold heading-track"><i>Porsches on Track</i></h2>
+    </div>
+  </section>
+
+  <!-- Track History Section -->
+  <section class="history-section" id="history">
+    <h2 class="history-heading">Porsche Motorsport Legacy</h2>
+
+    <h3 class="history-subheading">A Legacy of Victory</h3>
+    <p>
+      Porsche has built a <mark class="history-mark">legendary reputation</mark> in motorsport since its first race in 1951. From the humble beginnings of the Porsche 356 to the race-bred machines like the 718 and 904, the company consistently proved that <mark class="history-mark">lightweight engineering and precision</mark> could outpace raw power. Over the decades, Porsche amassed over <mark class="history-mark">20,000 victories</mark> across nearly every form of motorsport — rally, Formula One, endurance, hill climbs, and more — making it the most successful manufacturer in racing history.
+    </p>
+
+    <h3 class="history-subheading">Le Mans Dominance</h3>
+    <p>
+      The 24 Hours of Le Mans remains the ultimate test of speed, efficiency, and durability — and it’s where Porsche has written its most iconic stories. With a record <mark class="history-mark">19 overall victories</mark>, no other brand comes close. From the brutal V12-powered 917K that claimed the first win in 1970, to the technologically advanced 919 Hybrid that dominated in the 2010s, Porsche has always used Le Mans to <mark class="history-mark">push boundaries</mark>. Each win was a milestone of innovation — turbocharging, dual-clutch transmissions, and hybrid systems — all born on the circuit before reaching the road.
+    </p>
+
+    <h3 class="history-subheading">The Present and Future</h3>
+    <p>
+      Porsche is not just looking backward. Today, the brand races in the FIA World Endurance Championship with the 963 prototype, continues success in customer GT racing, and explores the future with electric motorsport through Formula E. Concepts like the <mark class="history-mark">Mission R</mark> blend sustainability with raw performance, showing that Porsche is committed to racing as a <mark class="history-mark">laboratory for the future</mark>. Whether it’s perfecting regenerative braking or refining aerodynamics, motorsport remains the beating heart of the brand.
+    </p>
+  </section>
+
+  <!-- Track Stats -->
+  <section class="track-stats-section">
+    <div class="track-stats-gallery">
+      <div class="track-stat floating-history" data-bg="lemans.jpeg">
+        <span class="stat-number">19</span>
+        <span class="stat-label">Le Mans Wins</span>
+      </div>
+      <div class="track-stat floating-history" data-bg="victory.jpeg">
+        <span class="stat-number">20K+</span>
+        <span class="stat-label">Motorsport Victories</span>
+      </div>
+      <div class="track-stat floating-history" data-bg="heritage.jpg">
+        <span class="stat-number">75</span>
+        <span class="stat-label">Years of Racing Heritage</span>
+      </div>
+    </div>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>The Porsche 911</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Google Fonts: Barlow Condensed -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700&display=swap" rel="stylesheet" />
+
+  <!-- External Styles -->
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- === Floating Navigation Bar === -->
+  <nav class="floating-nav">
+    <ul>
+      <li><a href="#top">Home</a></li>
+      <li><a href="#specs">Specs</a></li>
+      <li><a href="track.html">Track</a></li>
+    </ul>
+  </nav>
+
+  <!-- === Hero Section === -->
+  <section class="section-title" id="top">
+    <h1 class="barlow-condensed-bold page-title">
+      Porsche 911
+      <span class="sub-label">Carrera GTS</span>
+    </h1>
+    <div class="hero-image-wrapper">
+      <img src="911side.png" alt="Porsche 911 Side View" class="hero-image slide-in" />
+    </div>
+  </section>
+
+  <!-- === Intro Text === -->
+  <section class="paragraph hover-lift">
+    <p class="barlow-condensed-regular car-summary">
+      <i>
+        The <mark>911 (991) Carrera GTS</mark> strikes a perfect balance between comfort and performance. 
+        With <mark>430 hp</mark>, wider bodywork, and sportier details, it's an everyday 911 that still thrills.
+      </i>
+    </p>
+  </section>
+
+  <!-- === Technical Specs Section === -->
+  <section class="modern-specs-section" id="specs">
+    <div class="specs-left">
+      <div class="spec-item">
+        <div class="spec-value">
+          <span class="count" data-target="3.0">0.0</span><span class="unit">s</span>
+        </div>
+        <div class="spec-label">0–100 km/h mit Sport Chrono Paket</div>
+      </div>
+      <div class="spec-item">
+        <div class="spec-value">
+          <span class="count" data-target="398">0</span><span class="unit">kW</span>
+          <span class="separator">/</span>
+          <span class="count" data-target="541">0</span><span class="unit">PS</span>
+        </div>
+        <div class="spec-label">Systemleistung (kW / PS)</div>
+      </div>
+      <div class="spec-item">
+        <div class="spec-value">
+          <span class="count" data-target="312">0</span><span class="unit">km/h</span>
+        </div>
+        <div class="spec-label">Höchstgeschwindigkeit</div>
+      </div>
+    </div>
+    <div class="specs-right">
+      <img src="porschefront.avif" alt="Porsche 911 Carrera GTS Front View" />
+    </div>
+  </section>
+
+  <!-- === Road Gallery Section === -->
+  <section class="road-gallery-section" id="more">
+    <h2 class="barlow-condensed-bold">Porsches on the Road</h2>
+    <div class="image-gallery">
+      <div class="floating-image" data-speed="0.3">
+        <img src="DSC_0065.JPG" alt="Porsche Driving 1" />
+      </div>
+      <div class="floating-image" data-speed="0.5">
+        <img src="DSC_0345.JPG" alt="Porsche Driving 2" />
+      </div>
+      <div class="floating-image" data-speed="0.4">
+        <img src="DSC_1460.JPG" alt="Porsche Driving 3" />
+      </div>
+    </div>
+  </section>
+
+  <!-- === JavaScript for animations and effects === -->
+  <script src="script.js"></script>
+
+</body>
+</html>
