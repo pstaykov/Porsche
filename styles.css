@@ -438,3 +438,91 @@ html, body {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   will-change: transform;
 }
+
+/* === Mobile Styles === */
+@media (max-width: 768px) {
+  .floating-nav {
+    flex-direction: column;
+    padding: 0.5rem 1rem;
+  }
+
+  .floating-nav ul {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .page-title {
+    font-size: 2.5rem;
+  }
+
+  .sub-label {
+    font-size: 0.8rem;
+  }
+
+  .hero-image-wrapper {
+    padding: 0 1rem;
+  }
+
+  .paragraph {
+    font-size: 1.2rem;
+    padding: 1.5rem;
+    margin: 2rem 1rem;
+  }
+
+  .modern-specs-section {
+    flex-direction: column;
+    padding: 2rem 1rem;
+  }
+
+  .specs-left, .specs-right {
+    margin: 1rem 0;
+    text-align: center;
+  }
+
+  .spec-value {
+    font-size: 2.5rem;
+  }
+
+  .road-gallery-section .image-gallery {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .floating-image {
+    width: 90vw;
+    height: auto;
+  }
+
+  .track-video-section {
+    height: 40vh;
+  }
+
+  .video-overlay h2 {
+    font-size: 2rem;
+    padding: 0 1rem;
+    text-align: center;
+  }
+
+  .history-section {
+    padding: 4rem 1.5rem;
+    font-size: 1.1rem;
+  }
+
+  .history-heading {
+    font-size: 2rem;
+  }
+
+  .history-subheading {
+    font-size: 1.2rem;
+  }
+
+  .track-stats-gallery {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .track-stat {
+    width: 90%;
+    height: auto;
+  }
+}
